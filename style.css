@@ -468,11 +468,14 @@ a, .btn {
   background: #393939;
 }
 .footer__menu {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   border-bottom: 3px solid #535353;;
   margin-bottom: 42px;
 }
 .footer__menu-link {
+  text-align: center;
+  white-space: nowrap;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -615,6 +618,9 @@ a, .btn {
   }
   .details__block {
     padding: 0 38px;
+  }
+  .footer__menu {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -898,7 +904,8 @@ a, .btn {
 @media screen and (max-width: 440px) {
   .footer__menu {
     margin-bottom: 58px;
-  }
+      grid-template-columns: repeat(1, 1fr);
+    }
   .footer__btns {
     flex-direction: column;
     margin-bottom: 50px;
