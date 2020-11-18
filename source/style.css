@@ -502,7 +502,7 @@ a, .btn {
 }
 .footer__menu {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	border-bottom: 3px solid #535353;;
 	margin-bottom: 42px;
 }
@@ -651,9 +651,6 @@ a, .btn {
 	}
 	.details__block {
 		padding: 0 38px;
-	}
-	.footer__menu {
-		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
@@ -909,6 +906,11 @@ a, .btn {
 		margin: 45px auto 0;
 	}
 }
+@media screen and (max-width: 600px) {
+	.footer__menu {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
 @media screen and (max-width: 560px) {
 	.main__logo-img {
 		width: auto;
@@ -951,8 +953,7 @@ a, .btn {
 @media screen and (max-width: 440px) {
 	.footer__menu {
 		margin-bottom: 58px;
-			grid-template-columns: repeat(1, 1fr);
-		}
+	}
 	.footer__btns {
 		flex-direction: column;
 		margin-bottom: 50px;
