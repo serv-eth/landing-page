@@ -977,10 +977,12 @@
 	<script>
 		const navBar = document.querySelector('#nav-bar')
 		document.querySelector('#nav-bar').addEventListener('click', () => {
+			document.body.style.paddingRight = '0px'
 			document.body.style.overflow = 'visible'
 			navBar.classList.add('closed')
 		})
 		document.querySelector('#menu-button').addEventListener('click', () => {
+			document.body.style.paddingRight = `${(window.innerWidth - document.body.clientWidth).toString(10)}px`
 			document.body.style.overflow = 'hidden'
 			navBar.classList.remove('closed')
 		})
