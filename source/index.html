@@ -170,6 +170,15 @@
 			color: #fff;
 			background: #24CDE8;
 		}
+		
+	           h1 {
+			font-weight: 300;
+			font-size: 40px;
+			line-height: 78px;
+			text-transform: uppercase;
+			color: #404040;
+                         }  
+		
 
 		@media screen and (max-width: 1000px) {
 			section > .title {
@@ -766,6 +775,99 @@
 				<button id='question-pricing-button'>Details</button>
 			</div>
 		</section>
+		
+		 <section id='addonsbanner'>
+			<style>
+				#addonsbanner {
+					grid-column: 1;
+					grid-row: 13;
+					display: flex;
+					justify-content: space-around;
+					align-items: stretch;
+					row-gap: 50px;
+					padding-top: 20px;
+					padding-bottom: 20px;
+				}
+
+				
+				
+				@media screen and (max-width: 680px) {
+					#addonsbanner {
+						flex-direction: column;
+						align-items: center;
+					}
+					#addonsbanner > .addonsbanner {
+						grid-column: 1;
+						grid-row: 1;
+
+				}
+
+			</style>
+
+                        <div class='addonsbanner'>
+
+			<h1> + ADD-ONS </h1>
+	
+			</div>
+
+                       
+                        </section>
+
+
+
+
+                       <section id='addons'>
+
+			<style>
+				#addons {
+					grid-column: 1;
+					grid-row: 14;
+					display: flex;
+					justify-content: space-around;
+					align-items: stretch;
+					row-gap: 50px;
+					padding-top: 20px;
+					padding-bottom: 50px;
+				}
+				#addons > .pricing-specs > .freebie {
+					flex-grow: 1;
+				}
+				@media screen and (max-width: 680px) {
+					#addons {
+						flex-direction: column;
+						align-items: center;
+					}
+					#addons> .pricing-specs.month {
+						grid-column: 1;
+						grid-row: 1;
+					
+					              }
+				}
+			</style>
+
+				
+			
+			<div class='pricing-specs month'>
+				<div class='amount'>$100</div>
+				<div class='per'><span>Per</span></div>
+				<div class='unit'>Month</div>
+				<div class='freebie'>(Chat)</div>
+				<button id='addonchat'>Details</button>
+			</div>
+			<div class='pricing-specs month'>
+				<div class='amount'>$200</div>
+				<div class='per'>Per</div>
+				<div class='unit'>Month</div>
+				<div class='freebie'>(Non-chat)</div>
+				<button id='addonnonchat'>Details</button>
+                         </div>
+			
+
+              </section>
+		
+	
+		
+		
 		<div id='footer-background' class='background'>
 			<style>
 				#footer-background {
@@ -978,6 +1080,42 @@
 					</p>
 				</div>
 			</div>
+
+                                <div id='addonchat-content' class='closed'>
+				<div class='pricing-specs'>
+					<div class='amount'>$100</div>
+					<div class='per'>Per</div>
+					<div class='unit'>Month</div>
+					<div class='freebie'>(Chat)</div>
+				</div>
+				<div class='copy'>
+					<p>
+						This is a 100 USD monthly add-on to your bill for every additional chat support platform (e.g Telegram, Intercom).
+					</p>
+					<br/>
+					<p>
+						The added monthly cost still includes 24×7 quality support service (minus 1 hour lunch breaks in certain cases and catastrophic events). Excess questions will still cost an additional $3 per question/case.
+                                        </p>
+				</div>
+			        </div>
+
+                               <div id='addonnonchat-content' class='closed'>
+				<div class='pricing-specs'>
+					<div class='amount'>$200</div>
+					<div class='per'>Per</div>
+					<div class='unit'>Month</div>
+					<div class='freebie'>(Non-chat)</div>
+				</div>
+				<div class='copy'>
+					<p>
+						This is a 200 USD monthly add-on to your bill for each additional non-chat support platform (e.g Email).
+					</p>
+					<br/>
+					<p>
+						The added monthly cost still includes 24×7 quality support service (minus 1 hour lunch breaks in certain cases and catastrophic events). Overage per resolved case will be an additional $5.
+                                        </p>
+				</div>
+			        </div>                 
 		</div>
 	</modal>
 	<script>
@@ -1010,6 +1148,9 @@
 		document.querySelector('#month-pricing-button').addEventListener('click', () => openModal('#month-fee-modal-content'))
 		document.querySelector('#message-pricing-button').addEventListener('click', () => openModal('#message-fee-modal-content'))
 		document.querySelector('#question-pricing-button').addEventListener('click', () => openModal('#question-fee-modal-content'))
+                document.querySelector('#addonchat').addEventListener('click', () => openModal('#addonchat-content'))
+		document.querySelector('#addonnonchat').addEventListener('click', () => openModal('#addonnonchat-content'))
+		
 	</script>
 </body>
 </html>
