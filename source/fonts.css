@@ -1,0 +1,54 @@
+
+@font-face {
+    font-family: 'creato';
+     src: url('./fonts/');
+    src: url('./fonts/creatodisplay-light-webfont.eot');
+    src: local('creato'), local('creatodisplay-light-webfont'),
+         url('./fonts/creatodisplay-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/creatodisplay-light-webfont.woff') format('woff'),
+         url('./fonts/creatodisplay-light-webfont.woff2') format('woff2'),
+         url('./fonts/creatodisplay-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'creato';
+    src: url('./fonts/creatodisplay-black-webfont.eot');
+    src: local('creato'), local('creatodisplay-black-webfont'),
+         url('./fonts/creatodisplay-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/creatodisplay-black-webfont.woff') format('woff'),
+         url('./fonts/creatodisplay-black-webfont.woff2') format('woff2'),
+         url('./fonts/creatodisplay-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'creato';
+    src: url('./fonts/creatodisplay-medium-webfont.eot');
+    src: local('creato'), local('creatodisplay-medium-webfont'),
+         url('./fonts/creatodisplay-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/creatodisplay-medium-webfont.woff') format('woff'),
+         url('./fonts/creatodisplay-medium-webfont.woff2') format('woff2'),
+         url('./fonts/creatodisplay-medium-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'creato';
+    src: url('./fonts/creatodisplay-regular-webfont.eot');
+    src: local('creato'), local('creatodisplay-regular-webfont'),
+         url('./fonts/creatodisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/creatodisplay-regular-webfont.woff') format('woff'),
+         url('./fonts/creatodisplay-regular-webfont.woff2') format('woff2'),
+         url('./fonts/creatodisplay-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
