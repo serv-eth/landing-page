@@ -22,7 +22,7 @@
 		url('./fonts/creatodisplay-black-webfont.woff') format('woff'),
 		url('./fonts/creatodisplay-black-webfont.woff2') format('woff2'),
 		url('./fonts/creatodisplay-black-webfont.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 900;
 	font-style: normal;
 }
 
@@ -51,6 +51,46 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-thin-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-thin-webfont'),
+		url('./fonts/creatodisplay-thin-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-thin-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-thin-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-thin-webfont.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-bold-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-thin-webfont'),
+		url('./fonts/creatodisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-bold-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-bold-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-bold-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-extrabold-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-extrabold-webfont'),
+		url('./fonts/creatodisplay-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-extrabold-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-extrabold-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-extrabold-webfont.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
 
 
 
