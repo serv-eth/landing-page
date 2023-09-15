@@ -14,15 +14,16 @@
 }
 
 @font-face {
-    font-family: 'creato';
-    src: url('./fonts/creatodisplay-black-webfont.eot');
-    src: local('creato'), local('creatodisplay-black-webfont'),
-         url('./fonts/creatodisplay-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/creatodisplay-black-webfont.woff') format('woff'),
-         url('./fonts/creatodisplay-black-webfont.woff2') format('woff2'),
-         url('./fonts/creatodisplay-black-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-black-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-black-webfont'),
+		url('./fonts/creatodisplay-black-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-black-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-black-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-black-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
