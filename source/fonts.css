@@ -1,76 +1,93 @@
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('./fonts/');
-	src: local('Proxima Nova'), local('ProximaNovaT-Thin'),
-		url('./fonts/?#iefix') format('embedded-opentype'),
-		url('./fonts/ProximaNovaT-Thin.woff') format('woff'),
-		url('./fonts/ProximaNovaT-Thin.ttf') format('truetype');
-	font-weight: 100;
-	font-style: normal;
-}
 
 @font-face {
-	font-family: 'Proxima Nova';
-	src: url('./fonts/ProximaNova-Light.eot');
-	src: local('Proxima Nova'), local('ProximaNova-Light'),
-		url('./fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
-		url('./fonts/ProximaNova-Light.woff') format('woff'),
-		url('./fonts/ProximaNova-Light.ttf') format('truetype');
+	font-family: 'creato';
+	src: url('./fonts/');
+	src: url('./fonts/creatodisplay-light-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-light-webfont'),
+		url('./fonts/creatodisplay-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-light-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-light-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-light-webfont.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Proxima Nova';
-	src: url('./fonts/ProximaNova-Regular.eot');
-	src: local('Proxima Nova'), local('ProximaNova-Regular'),
-		url('./fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-		url('./fonts/ProximaNova-Regular.woff') format('woff'),
-		url('./fonts/ProximaNova-Regular.ttf') format('truetype');
-	font-weight: normal;
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-black-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-black-webfont'),
+		url('./fonts/creatodisplay-black-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-black-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-black-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-black-webfont.ttf') format('truetype');
+	font-weight: 900;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Proxima Nova';
-	src: url('./fonts/ProximaNova-Semibold.eot');
-	src: local('Proxima Nova'), local('ProximaNova-Semibold'),
-		url('./fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
-		url('./fonts/ProximaNova-Semibold.woff') format('woff'),
-		url('./fonts/ProximaNova-Semibold.ttf') format('truetype');
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-medium-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-medium-webfont'),
+		url('./fonts/creatodisplay-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-medium-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-medium-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-medium-webfont.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Proxima Nova';
-	src: url('./fonts/ProximaNova-Bold.eot');
-	src: local('Proxima Nova'), local('ProximaNova-Bold'),
-		url('./fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-		url('./fonts/ProximaNova-Bold.woff') format('woff'),
-		url('./fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-regular-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-regular-webfont'),
+		url('./fonts/creatodisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-regular-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-regular-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-thin-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-thin-webfont'),
+		url('./fonts/creatodisplay-thin-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-thin-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-thin-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-thin-webfont.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-bold-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-thin-webfont'),
+		url('./fonts/creatodisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-bold-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-bold-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-bold-webfont.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Proxima Nova';
-	src: url('./fonts/ProximaNova-Extrabld.eot');
-	src: local('Proxima Nova'), local('ProximaNova-Extrabld'),
-		url('./fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
-		url('./fonts/ProximaNova-Extrabld.woff') format('woff'),
-		url('./fonts/ProximaNova-Extrabld.ttf') format('truetype');
+	font-family: 'creato';
+	src: url('./fonts/creatodisplay-extrabold-webfont.eot');
+	src: local('creato'),
+		local('creatodisplay-extrabold-webfont'),
+		url('./fonts/creatodisplay-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/creatodisplay-extrabold-webfont.woff') format('woff'),
+		url('./fonts/creatodisplay-extrabold-webfont.woff2') format('woff2'),
+		url('./fonts/creatodisplay-extrabold-webfont.ttf') format('truetype');
 	font-weight: 800;
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('./fonts/ProximaNova-Black.eot');
-	src: local('Proxima Nova'), local('ProximaNova-Black'),
-		url('./fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
-		url('./fonts/ProximaNova-Black.woff') format('woff'),
-		url('./fonts/ProximaNova-Black.ttf') format('truetype');
-	font-weight: 900;
-	font-style: normal;
-}
