@@ -1,1110 +1,323 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<meta name='theme-color' content='#21296e'>
-	<meta name='description' content='Serv.eth Support'>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">   
+		<meta name="description" content="Specialized 24/7 Discord support for Ethereum applications, with crypto-friendly payments and startup-friendly pricing." />
+		<meta name="author" content="Serv.eth" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Serv.eth — Ethereum Support" />
+		<meta property='og:url' content='https://serv.eth/' />
+		<meta property='og:image' content='https://serveth.support/img/serveth-text-stacked-logo-gradient-right.png' />
+		<meta property='og:image:width' content='1600' />
+		<meta property='og:image:width' content='600' />
+		<meta property='og:image' content='https://serveth.support/img/serveth-gradient-square-transparent-small.png' />
+		<meta property='og:image:width' content='337' />
+		<meta property='og:image:width' content='337' />
+		<meta property="og:description" content="Supporting your Ethereum application so you can focus on building! We provide outsourced tier 1 chat support services specializing in Ethereum application support, all at a startup friendly price." />
+		<meta property='og:determiner' content='' />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property='twitter:image' content='https://serveth.support/img/serveth-gradient-square-transparent-small.png'/>
 
-	<meta property='og:title' content='Serv.eth Support' />
-	<meta property='og:type' content='website' />
-	<meta property='og:url' content='https://serv.eth/' />
-	<meta property='og:image' content='https://serveth.support/img/serveth-text-stacked-logo-gradient-right.png' />
-	<meta property='og:image:width' content='1600' />
-	<meta property='og:image:width' content='600' />
-	<meta property='og:image' content='https://serveth.support/img/serveth-gradient-square-transparent-small.png' />
-	<meta property='og:image:width' content='337' />
-	<meta property='og:image:width' content='337' />
-	<meta property='og:description' content='Supporting your Ethereum application so you can focus on building!  We provide outsourced tier 1 chat support services specializing in Ethereum application support, all at a startup friendly price.' />
-	<meta property='og:determiner' content='' />
-	<meta property='twitter:card' content='summary'/>
-	<meta property='twitter:image' content='https://serveth.support/img/serveth-gradient-square-transparent-small.png'/>
+		<link rel='icon' href='./img/favicon.png' type='image/png'>
+		<link rel="stylesheet" href="styles.css" />
 
+		<title>Serv.eth — Ethereum Support, Around the Clock</title>
+	</head>
+	<body>
+		<main>
+			<!-- Hero -->
+			<section id="home" class="hero">
+				<nav class="nav" aria-label="Primary navigation">
+					<a href="#home" aria-label="Serv.eth home">
+						<img class="nav-logo" src="img/logo.svg" alt="Serv.eth" />
+					</a>
+					<div class="nav-links">
+						<a class="nav-link" href="#service">Our service</a>
+						<a class="nav-link" href="#about">About us</a>
+						<a class="nav-link" href="#testimonials">Testimonials</a>
+						<a class="nav-link" href="#pricing">Pricing</a>
+					</div>
+					<a class="outline-button" href="#contact">
+						Let’s talk
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+					</a>
+				</nav>
 
-	<link rel='shortcut icon' href='./img/favicon.png' type='image/png'>
-
-	<link rel='stylesheet' href='fonts.css'>
-
-	<title>Serv.eth</title>
-
-	<style>
-		* {
-			position: relative;
-			margin: 0;
-			padding: 0;
-			border: 0;
-			outline: 0;
-		}
-		body {
-			background: #f4f4f4;
-			font-size: 100%;
-			font-family: 'creato',sans-serif;
-			font-weight: normal;
-			font-style: normal;
-		}
-		a, button {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.image {
-			justify-self: center;
-			align-self: center;
-			width: 100%;
-			height: 100%;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-		.button {
-			min-width: max-content;
-			height: 40px;
-			box-sizing: border-box;
-			border-radius: 20px;
-			font-weight: normal;
-			font-size: 18px;
-			line-height: 22px;
-			text-decoration: none;
-			color: #16F7E3;
-			background: transparent;
-			border: 1px solid #16F7E3;
-			filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
-			padding: 20px;
-		}
-		.button:hover {
-			color: #21296e;
-			background: #fff;
-			border: 1px solid #fff;
-			filter: none;
-		}
-		.background {
-			justify-self: normal;
-			height: 100%;
-			z-index: -1;
-		}
-		.closed {
-			display: none !important;
-		}
-
-		section {
-			width: calc(100% - 40px);
-			max-width: 1000px;
-			gap: 20px;
-		}
-		section > .title {
-			font-size: 32px;
-			font-weight: 600;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-			color: #464646;
-		}
-		section > .copy {
-			font-weight: normal;
-			font-size: 18px;
-			line-height: 30px;
-			color: #6C6C6C;
-		}
-
-		.pricing-specs {
-			display: flex;
-			flex-direction: column;
-			justify-items: center;
-			align-items: center;
-			width: 200px;
-		}
-		.pricing-specs > .amount {
-			font-weight: 700;
-			font-size: 64px;
-			line-height: 78px;
-			text-transform: uppercase;
-			color: #404040;
-		}
-		.pricing-specs > .per {
-			display: inline-flex;
-			align-items: center;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 36px;
-			letter-spacing: 0.14em;
-			text-transform: uppercase;
-			color: #929292;
-		}
-		.pricing-specs > .per::before, .per::after {
-			content: '';
-			display: block;
-			width: 44px;
-			height: 2px;
-			background: #29DBD0;
-			margin: 0px 12px 0px 12px;
-		}
-		.pricing-specs > .unit {
-			font-size: 16px;
-			line-height: 32px;
-			font-weight: 700;
-			color: #404040;
-			text-transform: uppercase;
-			white-space: nowrap;
-		}
-		.pricing-specs > .freebie {
-			font-size: 16px;
-			line-height: 32px;
-			text-transform: uppercase;
-			white-space: nowrap;
-			font-weight: 300;
-			color: #929292;
-		}
-		.pricing-specs > button {
-			width: 160px;
-			height: 32px;
-			font-weight: 500;
-			font-size: 12px;
-			line-height: 15px;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-			color: #12B9DE;
-			background: #3A3A3A;
-			border-radius: 20px;
-			cursor: pointer;
-		}
-		.pricing-specs > button:hover {
-			color: #fff;
-			background: #24CDE8;
-		}
-		@media screen and (max-width: 1000px) {
-			section > .title {
-				font-size: 24px;
-			}
-			section > .copy {
-				font-size: 16px;
-			}
-		}
-	</style>
-</head>
-<body>
-	<article id='page-container'>
-		<style>
-			#page-container {
-				display:grid;
-				grid-template-columns: 1fr;
-				justify-items: center;
-				align-items: center;
-			}
-		</style>
-		<div id='nav-intro-background' class='background'>
-			<style>
-				#nav-intro-background {
-					grid-column: 1;
-					grid-row: 1/4;
-					background: linear-gradient(to bottom right, #082F5C, #8809B5);
-				}
-			</style>
-		</div>
-		<button id='menu-button'>
-			<style>
-				#menu-button {
-					position: fixed;
-					top: 25px;
-					left: 25px;
-					display: none;
-					flex-direction: column;
-					justify-content: space-between;
-					width: 25px;
-					height: 25px;
-					background: transparent;
-					cursor: pointer;
-					z-index: 50;
-				}
-				@media screen and (max-width: 680px) {
-					#menu-button {
-						display: flex;
-					}
-				}
-				#menu-button > div {
-					width: 100%;
-					height: 3px;
-					background-color: white;
-					border-radius: 2px;
-					box-shadow: 0 0 6px black;
-				}
-			</style>
-			<div></div>
-			<div></div>
-			<div></div>
-		</button>
-		<menu id='nav-bar' class='closed'>
-			<style>
-				#nav-bar {
-					display:flex;
-					flex-direction: row;
-					grid-row: 1;
-					grid-column: 1;
-					justify-self: end;
-					z-index: 60;
-				}
-				#nav-bar > .branding {
-					display: none;
-				}
-				#nav-bar > .nav-item {
-					display: flex;
-					flex-direction: column;
-					width: 170px;
-					flex-grow: 0;
-					text-align: center;
-					font-weight: 600;
-					font-size: 12px;
-					line-height: 15px;
-					letter-spacing: 0.3em;
-					text-transform: uppercase;
-					color: #fff;
-					text-decoration-line: none;
-					padding-top: 30px;
-				}
-				#nav-bar > .nav-item:hover {
-					background: linear-gradient(180deg, #8CEAFF00, #8CEAFF80);
-				}
-				#nav-bar > .nav-item::after {
-					content: '';
-					display: block;
-					width: 100%;
-					height: 3px;
-					margin-top: 10px;
-					background: linear-gradient(180deg, #8621EB 0%, #A816ED 100%);
-				}
-				#nav-bar > .nav-item:hover::after {
-					background: #24CDE8;
-				}
-				@media screen and (max-width: 680px) {
-					#nav-bar {
-						display: flex;
-						flex-direction: column;
-						position: fixed;
-						height: 100%;
-						width: 200px;
-						background: white;
-						top: 0;
-						left: 0;
-						align-items: flex-end;
-					}
-					#nav-bar::after {
-						position: fixed;
-						top: 0px;
-						left: 200px;
-						width: calc(100vw - 200px);
-						height: 100vh;
-						content: '';
-						background-color: black;
-						opacity: 0.5;
-					}
-					#nav-bar > .branding {
-						display: block;
-						flex-basis: max-content;
-						height: unset;
-						width: unset;
-						margin: 15px;
-						background-image: url('./img/serveth-text-stacked-logo-purple-gradient-right.svg');
-					}
-					#nav-bar > .nav-item {
-						color: #A8A8A8;
-						align-items: flex-end;
-						justify-content: flex-end;
-						padding: 15px;
-						flex-direction: row;
-					}
-					#nav-bar > .nav-item:hover {
-						background: linear-gradient(90deg, #8CEAFF00, #8CEAFF80);
-					}
-					#nav-bar > .nav-item::after {
-						position: absolute;
-						right: 0px;
-						top: 0px;
-						height: 100%;
-						width: 3px;
-						margin-top: 0px;
-						margin-left: 10px;
-						background: none;
-					}
-				}
-				@media screen and (min-width: 681px) {
-					#nav-bar.closed {
-						display: flex !important;
-					}
-				}
-			</style>
-			<a class='branding image' href='#intro'><svg viewBox='0 0 1161 394'></svg></a>
-			<a class='nav-item' href='#service'>Our Service</a>
-			<a class='nav-item' href='#about'>About Us</a>
-			<a class='nav-item' href='#pricing'>Pricing</a>
-			<a class='nav-item' href='#contacts'>Contacts</a>
-		</menu>
-		<section id='intro'>
-			<style>
-				#intro {
-					grid-column: 1;
-					grid-row: 2;
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-template-rows: 1fr 1fr 1fr;
-					gap: 20px;
-					height: 400px;
-					margin-top: 30px;
-					align-items: center;
-				}
-				#intro > .image.branding {
-					grid-column: 1;
-					grid-row: 1;
-					background-image: url("./img/serveth-text-stacked-logo-purple-gradient-right.svg");
-				}
-				#intro > .copy {
-					grid-column: 1;
-					grid-row: 2;
-				}
-				#intro > .copy h1 {
-					font-size: 28px;
-					line-height: 34px;
-					font-weight: 300;
-					color: white;
-				}
-				#intro > .copy p {
-					font-size: 16px;
-					line-height: 19px;
-					font-weight: 500;
-					color: #BDBDBD;
-				}
-				#intro > .action {
-					grid-column: 1;
-					grid-row: 3;
-					justify-self: center;
-					align-self: end;
-					width: 100%;
-					max-width: 211px;
-				}
-				#intro > .image {
-					grid-column: 2;
-					grid-row: 1/4;
-					justify-self: center;
-					align-self: center;
-					width: 100%;
-					height: 100%;
-					background-image: url("./img/main-image.svg");
-					background-size: contain;
-					background-repeat: no-repeat;
-					background-position: center;
-				}
-				@media screen and (max-width: 680px) {
-					#intro {
-						grid-template-columns: 1fr;
-						grid-template-rows: repeat(4, auto);
-						gap: 20px;
-						height: unset;
-						margin-top: 60px;
-						margin-bottom: 20px;
-					}
-					#intro > .branding {
-						grid-column: 1;
-						grid-row: 1;
-						max-width: 300px;
-					}
-					#intro > .image {
-						grid-column: 1;
-						grid-row: 2;
-						max-width: 300px;
-					}
-					#intro > .copy {
-						grid-column: 1;
-						grid-row: 3;
-					}
-					#intro > .action {
-						grid-column: 1;
-						grid-row: 4;
-						justify-self: center;
-					}
-				}
-			</style>
-			<div class='branding image'><svg viewBox='0 0 1161 394'></svg></div>
-			<div class='copy'>
-				<h1>Supporting your <b>Ethereum application</b> so you can focus on building!</h1>
-				<p>We provide outsourced tier 1 chat support services specializing in Ethereum application support, all at a startup friendly price.</p>
-			</div>
-			<a class='action button' href='#contacts'>Contact Us</a>
-			<div class='image'><svg viewBox='0 0 260 251'></svg></div>
-		</section>
-		<div class='intro-seperator'>
-			<style>
-				.intro-seperator {
-					grid-column: 1;
-					grid-row: 3;
-					justify-self: normal;
-					height:75px;
-				}
-				.intro-seperator > .split {
-					position: absolute;
-					left: 0px;
-				}
-				.intro-seperator > .hump {
-					position:absolute;
-					z-index:10;
-					left:50%;
-					top:50%;
-					transform:translate(-50%,-50%);
-				}
-				.intro-seperator > .ball {
-					position:absolute;
-					height:66%;
-					z-index:20;
-					left:50%;
-					top:50%;
-					transform:translate(-50%,-50%);
-				}
-			</style>
-			<svg class='split' width='100%' height='100%' viewBox='0 0 100 100' preserveAspectRatio='none'>
-				<rect x='0' y='50' width='100' height='50' fill='#f4f4f4'/>
-			</svg>
-			<svg class='hump' height='100%' viewBox='0 0 200 100'>
-				<path d='M 0 52 C 50 52, 50 0, 100 0 C 150 0, 150 52, 200 52' fill='#f4f4f4'/>
-			</svg>
-			<a class='ball' href='#service'>
-				<svg viewBox='0 0 100 100' style='height:100%'>
-					<defs>
-						<linearGradient id="gradient" gradientTransform="rotate(90)">
-							<stop offset="5%" stop-color="#0C2D5F"/>
-							<stop offset="95%" stop-color="#8810C4"/>
-						</linearGradient>
-					</defs>
-					<circle cx='50' cy='50' r='50' fill='url("#gradient")'/>
-					<path d='M 35 45 L 50 60 L 65 45' stroke='#16F7E3' stroke-width='5px' fill='none'/>
-				</svg>
-			</a>
-		</div>
-		<div class='service-background'>
-			<style>
-				.service-background {
-					grid-column: 1;
-					grid-row: 3/5;
-					width: 100%;
-					height: 100%;
-					opacity: 0.1;
-					background-image: url('./img/service-bg.svg');
-					background-size: auto;
-					background-repeat: no-repeat;
-					background-position: top right;
-				}
-			</style>
-		</div>
-		<section id='service'>
-			<style>
-				#service {
-					grid-column: 1;
-					grid-row: 4;
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-template-rows: auto auto;
-					margin-top: 20px;
-				}
-				#service > .title {
-					grid-column: 2;
-					grid-row: 1;
-				}
-				#service > .copy {
-					grid-column: 2;
-					grid-row: 2;
-				}
-				#service > .image {
-					grid-column: 1;
-					grid-row: 1/3;
-					background-image: url('./img/service-img.svg');
-				}
-				@media screen and (max-width: 680px) {
-					#service {
-						grid-template-columns: 1fr;
-						grid-template-rows: auto auto auto;
-					}
-					#service > .title {
-						grid-column: 1;
-						grid-row: 1;
-						justify-self: center;
-					}
-					#service > .image {
-						grid-column: 1;
-						grid-row: 2;
-						max-width: 300px;
-						max-height: 300px;
-					}
-					#service > .copy {
-						grid-column: 1;
-						grid-row: 3;
-					}
-				}
-			</style>
-			<h2 class='title'>our service</h2>
-			<p class='copy'>
-				Our team of customer service professionals will hang out in your Ethereum application's Discord server and provide rapid response to all user inquiries 24 hours a day, 7 days a week.
-				Our representatives are trained in troubleshooting all of the common Ethereum problems like gas price selection, pending/stuck transactions, gas limits, token balance checks, MetaMask issues, etc.
-				They also will learn the basics of your product offering and assist users to the best of their ability with using your product.
-				When they are unable to answer a question, they will gather necessary basic troubleshooting info and escalate the issue to your team for handling.
-			</p>
-			<div class='image'><svg viewBox='0 0 602 431'></svg></div>
-		</section>
-		<div style='height:75px'></div>
-		<section id='about'>
-			<style>
-				#about {
-					grid-column: 1;
-					grid-row: 6;
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-template-rows: auto auto;
-				}
-				#about > .title {
-					grid-column: 1;
-					grid-row: 1;
-				}
-				#about > .copy {
-					grid-column: 1;
-					grid-row: 2;
-				}
-				#about > .image {
-					grid-column: 2;
-					grid-row: 1/3;
-					background-image: url('./img/about-image.svg');
-				}
-				@media screen and (max-width: 680px) {
-					#about {
-						grid-template-columns: 1fr;
-						grid-template-rows: auto auto auto;
-					}
-					#about > .title {
-						grid-column: 1;
-						grid-row: 1;
-						justify-self: center;
-					}
-					#about > .image {
-						grid-column: 1;
-						grid-row: 2;
-						max-width: 300px;
-						max-height: 300px;
-					}
-					#about > .copy {
-						grid-column: 1;
-						grid-row: 3;
-					}
-				}
-			</style>
-			<h2 class='title'>about us</h2>
-			<p class='copy'>
-				Serv.eth Support was created after its founder, Micah Zoltu, noticed that many Ethereum application Discord servers had many user questions which would go unanswered for hours or days, leading to user frustration.
-				Originally Micah tried to help out some of the projects themself by answering questions, but this quickly grew too time consuming.
-				Unfortunately, some applications don't have the volume of questions necessary to hire their own in-house support team, but they also can't utilize traditional support outsourcing services because Ethereum support is too technical.
-				<br>
-				<br>
-				By creating an Ethereum focused Discord support team, it allows us to be able to immediately provide value to Ethereum applications without lengthy and expensive training on just the basics of Ethereum.
-				We can join your Discord server and hit the ground running without you having to learn new specialized tools or change your workflow.
-				You can focus on building your application and we'll focus on ensuring your users get speedy replies and triage for their issues.
-			</p>
-			<div class='image'><svg viewBox='0 0 250 392'></svg></div>
-		</section>
-		<div style='height:35px; grid-column: 1; grid-row: 7;'></div>
-		<div style='height:35px; grid-column: 1; grid-row: 8;'></div>
-		<section id='payment'>
-			<style>
-				#payment {
-					grid-column: 1;
-					grid-row: 9;
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-template-rows: auto auto;
-				}
-				#payment > .title {
-					grid-column: 2;
-					grid-row: 1;
-					color: #42E8E0
-				}
-				#payment > .copy {
-					grid-column: 2;
-					grid-row: 2;
-					font-weight: 200;
-					color: white;
-				}
-				#payment > .image {
-					grid-column: 1;
-					grid-row: 1/3;
-					background-image: url('./img/pricing-img.svg')
-				}
-				@media screen and (max-width: 680px) {
-					#payment {
-						grid-template-columns: 1fr;
-						grid-template-rows: auto auto auto;
-					}
-					#payment > .title {
-						grid-column: 1;
-						grid-row: 1;
-						justify-self: center;
-					}
-					#payment > .image {
-						grid-column: 1;
-						grid-row: 2;
-						max-width: 300px;
-						max-height: 300px;
-					}
-					#payment > .copy {
-						grid-column: 1;
-						grid-row: 3;
-					}
-				}
-			</style>
-			<div class='image'><svg viewBox='0 0 479 342'></svg></div>
-			<h2 class='title'>pay with crypto</h2>
-			<p class='copy'>
-				ETH, DAI, and USDC are all accepted.
-				<br>
-				<br>
-				We are a crypto company through and through, which means we accept payment in crypto as well.
-				ETH, DAI, or USDC are our preferred modes of payment, but we are open to accepting payment in other coins/tokens as long as they are liquid enough for us to convert them on receipt.
-				<br>
-				<br>
-				<i>Note: Scam coins not accepted.</i> 😊
-			</p>
-		</section>
-		<section id='pricing'>
-			<style>
-				#pricing {
-					grid-column: 1;
-					grid-row: 10;
-					display: grid;
-					justify-items: center;
-				}
-				#pricing > .title {
-					margin-bottom: 0px;
-					color: #42E8E0;
-					font-weight: 500;
-					font-size: 36px;
-					line-height: 100px;
-					letter-spacing: 0.08em;
-				}
-			</style>
-			<h3 class='title'>Pricing</h3>
-		</section>
-		<div id='pricing-background' class='background'>
-			<style>
-				#pricing-background {
-					grid-column: 1;
-					grid-row: 8/11;
-					background: linear-gradient(to bottom,  #221057, #0E30A7);
-				}
-			</style>
-		</div>
-		<div id='pricing-seperator'>
-			<style>
-				#pricing-seperator {
-					grid-column: 1;
-					grid-row: 11;
-					justify-self: normal;
-					display: grid;
-					height:75px;
-				}
-			</style>
-			<a href='#pricing' style='width: 300px; justify-self: center; align-items: flex-start;'>
-				<svg viewBox='0 0 400 100' style='position:absolute; z-index:-1; height: 100%; justify-self: center;'>
-					<path d='M 0 0 C 25 0, 35 0, 50 10 L 185 90 Q 200 100, 215 90 L 350 10 C 365 0, 375 0, 400 0' fill='#0E30A7'/>
-				</svg>
-				<img src='./img/pricing-arrow.svg' style='position: absolute; justify-self: center; margin-top: 20px;'/>
-			</a>
-		</div>
-		<section id='pricing2'>
-			<style>
-				#pricing2 {
-					grid-column: 1;
-					grid-row: 12;
-					display: flex;
-					justify-content: space-around;
-					align-items: stretch;
-					row-gap: 50px;
-					padding-top: 50px;
-					padding-bottom: 50px;
-				}
-				#pricing2 > .pricing-specs > .freebie {
-					flex-grow: 1;
-				}
-				@media screen and (max-width: 680px) {
-					#pricing2 {
-						flex-direction: column;
-						align-items: center;
-					}
-					#pricing2 > .pricing-specs.month {
-						grid-column: 1;
-						grid-row: 1;
-					}
-					#pricing2 > .pricing-specs.message {
-						grid-column: 1;
-						grid-row: 2;
-					}
-					#pricing2 > .pricing-specs.question {
-						grid-column: 1;
-						grid-row: 3;
-					}
-				}
-			</style>
-			<div class='pricing-specs month'>
-				<div class='amount'>$500</div>
-				<div class='per'><span>Per</span></div>
-				<div class='unit'>Month</div>
-				<div class='freebie'></div>
-				<button id='month-pricing-button'>Details</button>
-			</div>
-			<div class='pricing-specs message'>
-				<div class='amount'>$0.04</div>
-				<div class='per'>Per</div>
-				<div class='unit'>Message</div>
-				<div class='freebie'>(First 20,000 free)</div>
-				<button id='message-pricing-button'>Details</button>
-			</div>
-			<div class='pricing-specs question'>
-				<div class='amount'>$3</div>
-				<div class='per'>Per</div>
-				<div class='unit'>Question</div>
-				<div class='freebie'>(First 100 free)</div>
-				<button id='question-pricing-button'>Details</button>
-			</div>
-		</section>
-		<section id='addonsbanner'>
-			<style>
-				#addonsbanner {
-					grid-column: 1;
-					grid-row: 13;
-					display: flex;
-					justify-content: space-around;
-					align-items: stretch;
-					row-gap: 50px;
-					padding-top: 20px;
-					padding-bottom: 20px;
-				}
-				@media screen and (max-width: 680px) {
-					#addonsbanner {
-						flex-direction: column;
-						align-items: center;
-					}
-					#addonsbanner > .addonsbanner {
-						grid-column: 1;
-						grid-row: 1;
-					}
-				}
-			</style>
-			<div class='addonsbanner'>
-				<h1> + ADD-ONS </h1>
-			</div>
-		</section>
-		<section id='addons'>
-			<style>
-				#addons {
-					grid-column: 1;
-					grid-row: 14;
-					display: flex;
-					justify-content: space-around;
-					align-items: stretch;
-					row-gap: 50px;
-					padding-top: 20px;
-					padding-bottom: 50px;
-				}
-				#addons > .pricing-specs > .freebie {
-					flex-grow: 1;
-				}
-				@media screen and (max-width: 680px) {
-					#addons {
-						flex-direction: column;
-						align-items: center;
-					}
-					#addons> .pricing-specs.month {
-						grid-column: 1;
-						grid-row: 1;
-					}
-				}
-			</style>
-			<div class='pricing-specs month'>
-				<div class='amount'>$100</div>
-				<div class='per'><span>Per</span></div>
-				<div class='unit'>Month</div>
-				<div class='freebie'>(Chat)</div>
-				<button id='addonchat'>Details</button>
-			</div>
-			<div class='pricing-specs month'>
-				<div class='amount'>$200</div>
-				<div class='per'>Per</div>
-				<div class='unit'>Month</div>
-				<div class='freebie'>(Non-chat)</div>
-				<button id='addonnonchat'>Details</button>
-			</div>
-		</section>
-		<div id='footer-background' class='background'>
-			<style>
-				#footer-background {
-					grid-column: 1;
-					grid-row: 15/17;
-					background-color: #393939;
-				}
-			</style>
-		</div>
-		<section id='bottom-nav'>
-			<style>
-				#bottom-nav {
-					grid-column: 1;
-					grid-row: 15;
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
-					gap: 0px;
-				}
-				#bottom-nav > .nav-item {
-					display: flex;
-					flex-direction: column;
-					width: 170px;
-					flex-grow: 0;
-					text-align: center;
-					font-weight: 500;
-					font-size: 12px;
-					line-height: 15px;
-					letter-spacing: 0.3em;
-					text-transform: uppercase;
-					color: #A8A8A8;
-					text-decoration-line: none;
-					padding-top: 30px;
-				}
-				#bottom-nav > .nav-item:hover {
-					color: white;
-				}
-				#bottom-nav > .nav-item::after {
-					content: '';
-					display: block;
-					width: 100%;
-					height: 3px;
-					margin-top: 10px;
-					background-color: #535353;
-				}
-				#bottom-nav > .nav-item:hover::after {
-					background-color: white;
-				}
-				@media screen and (max-width: 680px) {
-					#bottom-nav {
-						flex-direction: column;
-						align-items: center;
-					}
-				}
-			</style>
-			<a class='nav-item' href='#service'>Our Service</a>
-			<a class='nav-item' href='#about'>About Us</a>
-			<a class='nav-item' href='#pricing'>Pricing</a>
-		</section>
-		<section id='contacts'>
-			<style>
-				#contacts {
-					grid-column: 1;
-					grid-row: 16;
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
-					column-gap: 50px;
-					row-gap: 20px;
-					padding-top: 50px;
-					padding-bottom: 50px;
-				}
-				#contacts > a {
-					width: 164px;
-				}
-			</style>
-			<a href='https://discord.gg/Epk9phBzAG' class='button'>Discord</a>
-			<a href='mailto:micah@serveth.support' class='button'>Email</a>
-		</section>
-	</article>
-	<modal class='closed'>
-		<style>
-			modal {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100vw;
-				height: 100vh;
-				z-index: 100;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			modal > #modal-backdrop {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: black;
-				opacity: 0.5;
-			}
-			modal > #modal-container {
-				background-color: white;
-				border-radius: 5px;
-			}
-			modal > #modal-container > div {
-				display: flex;
-				align-items: center;
-				max-width: calc(100vw * 0.9);
-				max-height: calc(100vh * 0.9);
-			}
-			modal > #modal-container > div > .pricing-specs {
-				width: max-content;
-				height: max-content;
-				justify-content: center;
-				margin: 50px;
-				margin-right: 0px;
-				padding-right: 25px;
-				border-right: 1px solid #EBEBEB;
-			}
-			modal > #modal-container > div > .copy {
-				overflow: auto;
-				max-width: 600px;
-				margin: 50px;
-				margin-left: 25px;
-			}
-			@media screen and (max-width: 680px) {
-				modal > #modal-container > div {
-					flex-direction: column;
-					align-items: center;
-				}
-				modal > #modal-container > div > .pricing-specs {
-					padding: 0px;
-					margin: 20px;
-					margin-bottom: 0px;
-					padding-bottom: 10px;
-					border-right: unset;
-					border-bottom: 1px solid #EBEBEB;
-				}
-				modal > #modal-container > div > .copy {
-					margin: 20px;
-					margin-top: 10px;
-				}
-			}
-		</style>
-		<div id='modal-backdrop'></div>
-		<div id='modal-container'>
-			<div id='month-fee-modal-content' class='closed'>
-				<div class='pricing-specs'>
-					<div class='amount'>$500</div>
-					<div class='per'><span>Per</span></div>
-					<div class='unit'>Month</div>
+				<div class="hero-grid">
+					<div class="hero-copy">
+						<p class="eyebrow">Human support for web3</p>
+						<h1 class="hero-title">Keep building.<br /><strong>We’ll handle support.</strong></h1>
+						<p class="hero-sub">
+							Outsourced tier-one chat support services specializing in Ethereum application support, all at a
+							startup friendly price.
+						</p>
+						<div class="hero-actions">
+							<a href="#contact" class="primary-button">
+								Start a conversation
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+							</a>
+							<a href="#service" class="text-link">
+								Explore our service
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
+							</a>
 				</div>
-				<div class='copy'>
-					<p>
-						500 USD worth of either ETH, DAI, or USDC is all that is required to get our team started.
-						We'll work with someone on your team to learn the basics of your product and join your Discord server.
-						We'll immediately start assisting your users with basic Ethereum problems like wallet issues, gas pricing issues, pending transaction issues, etc. and once we have a basic understanding of your product we'll start offering basic support for it.
+				</div>
+					<div class="hero-art">
+						<div class="hero-art-glow"></div>
+						<img src="img/main-image.svg" alt="Abstract Ethereum support network illustration" />
+				</div>
+				</div>
+			</section>
+
+			<!-- Logo marquee loop -->
+			<section class="marquee-section" aria-labelledby="clients-title">
+				<p id="clients-title" class="marquee-title">Trusted by Clients</p>
+				<div class="marquee-mask" role="region" aria-label="Serv.eth clients">
+					<div class="marquee-track">
+						<div class="logo-set">
+							<div class="client-logo"><img src="img/c_logo-Safe.png" alt="Safe" /></div>
+							<div class="client-logo"><img src="img/c_logo-Interceptor.png" alt="Interceptor" /></div>
+							<div class="client-logo"><img src="img/c_logo-1inch.svg" alt="1inch" /></div>          
+							<div class="client-logo"><img src="img/c_logo-Flashbots.svg" alt="Flashbots" /></div>
+							<div class="client-logo"><img src="img/c_logo-Quicknode.svg" alt="Quicknode" /></div>
+							<div class="client-logo"><img src="img/c_logo-Spectra.svg" alt="Spectra" /></div>			 
+							<div class="client-logo"><img src="img/c_logo-Mento.svg" alt="Mento" /></div>              
+							<div class="client-logo"><img src="img/c_logo-Umbra.png" alt="Umbra" /></div>
+							<div class="client-logo"><img src="img/c_logo-Enso.svg" alt="Enso" /></div>
+							<div class="client-logo"><img src="img/c_logo-Rundiffusion1.webp" alt="Rundiffusion" /></div>
+							<div class="client-logo"><img src="img/c_logo-Uniswap.svg" alt="Uniswap" /></div>              
+							<div class="client-logo"><img src="img/c_logo-Nethermind.svg" alt="Nethermind" /></div>
+							<div class="client-logo"><img src="img/c_logo-Sablier.svg" alt="Sablier" /></div>
+							<div class="client-logo"><img src="img/c_logo-Integral.png" alt="Integral" /></div>			  
+							<div class="client-logo"><img src="img/c_logo-Mycelium.png" alt="Mycelium" /></div>
+							<div class="client-logo"><img src="img/c_logo-Oiler.svg" alt="Oiler" /></div>              
+				</div>
+						<div class="logo-set" aria-hidden="true">
+							<div class="client-logo"><img src="img/c_logo-Safe.png" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Interceptor.png" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-1inch.svg" alt="" /></div>        
+							<div class="client-logo"><img src="img/c_logo-Flashbots.svg" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Quicknode.svg" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Spectra.svg" alt="" /></div>			  	
+							<div class="client-logo"><img src="img/c_logo-Mento.svg" alt="" /></div>            
+							<div class="client-logo"><img src="img/c_logo-Umbra.png" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Enso.svg" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Rundiffusion1.webp" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Uniswap.svg" alt="" /></div>             
+							<div class="client-logo"><img src="img/c_logo-Nethermind.svg" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Sablier.svg" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Integral.png" alt="" /></div>            			 
+							<div class="client-logo"><img src="img/c_logo-Mycelium.png" alt="" /></div>
+							<div class="client-logo"><img src="img/c_logo-Oiler.svg" alt="" /></div>
+				</div>
+				</div>
+				</div>
+			</section>
+
+			<!-- Service -->
+			<section class="content-section split"> 
+				<div class="service-art-col">
+					<img class="service-art" src="img/service-img.svg" alt="Customer support specialist illustration" loading="lazy" />
+				</div>
+				<div class="service-copy-col">
+					<p id="service" class="section-kicker">01 / Our service</p> 
+					<h2 class="section-title">Technical answers.<br />Human delivery.</h2>
+					<p class="section-copy">
+						Our team joins your Discord and provides rapid responses 24 hours a day, seven days a week.
+						<br /><br />
+						We troubleshoot gas selection, pending transactions, token balances, product basics, web3 wallet issues
+						and more. When an issue needs your team, we collect the right context and deliver a clean escalation.
 					</p>
-					<br/>
-					<p>
-						The 500 USD monthly cost will cover us sitting in a combination of channels of your choosing that generate up to 20,000 messages per month and we'll assist up to 100 questions over the course of the month at no additional charge.
-						Our team will be present in your server 24 hours a day, 7 days a week minus 1 hour lunch breaks and catastrophic events.</p>
-					<br/>
-					<p>
-						Optionally, our team can also be given moderation power to help deal with spam and scams, which can be a great value-add since they will already be in your channel all day every day.
-					</p>
+					<ul class="feature-list">
+						<li>
+							<span class="check-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span>
+							Always-on Discord coverage
+						</li>
+						<li>
+							<span class="check-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span>
+							Ethereum-native troubleshooting
+						</li>
+						<li>
+							<span class="check-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span>
+							Clear escalation to your team
+						</li>
+					</ul>
 				</div>
-			</div>
-			<div id='message-fee-modal-content' class='closed'>
-				<div class='pricing-specs'>
-					<div class='amount'>$0.04</div>
-					<div class='per'>Per</div>
-					<div class='unit'>Message</div>
-					<div class='freebie'>(First 20,000 free)</div>
+			</section>
+
+			<!-- About -->
+			<section class="about-band">
+				<div class="about-inner">
+					<div>
+						<p id="about" class="section-kicker about-kicker">02 / About us</p> 
+						<h2 class="section-title about-title">Support designed for Ethereum.</h2>
+						<p class="section-copy about-copy">
+							Serv.eth Support began after founder Micah Zoltu saw user questions going unanswered for hours or days
+							across Ethereum Discord communities, leading to user frustration. Originally Micah tried to help out
+							some of the projects themself by answering questions, but this quickly grew too time consuming.
+							Unfortunately, some applications don't have the volume of questions necessary to hire their own
+							in-house support team, but they also can't utilize traditional support outsourcing services because
+							Ethereum support is too technical.
+							<br /><br />
+							By creating an Ethereum focused Discord support team, it allows us to be able to immediately provide
+							value to Ethereum applications without lengthy and expensive training on just the basics of Ethereum.
+							Serv.eth closes that gap with specialists who understand Ethereum before they ever enter your server.
+						</p>
+						<p class="about-line">You focus on the product. We make sure users feel heard.</p>
 				</div>
-				<div class='copy'>
-					<p>
-						If you want our team to read particularly high volume channels, such as speculation/trading channels or bot channels we can do so.
-						This can ensure that every user who asks a support question gets an answer, even if they ask in the wrong place.
-						If you opt for us to help you with scam/scam moderation, having us watch these channels can prove valuable so the scammers/spammers don't have any place on your server to hide.
-					</p>
-					<br/>
-					<p>
-						The first 20,000 messages read per month are free, and this is enough to cover most Discord servers without any overage charges.
-						However, if your server is particularly high volume then there will be an additional charge of 0.04 USD per message read over 20,000.
-						Remember, you can tell us to mute certain channels if you would like to keep costs low and have us focus on more critical channels!
-					</p>
+					<img class="about-art" src="img/about-image.svg" alt="Serv.eth team collaboration illustration" loading="lazy" />
 				</div>
-			</div>
-			<div id='question-fee-modal-content' class='closed'>
-				<div class='pricing-specs'>
-					<div class='amount'>$3</div>
-					<div class='per'>Per</div>
-					<div class='unit'>Question</div>
-					<div class='freebie'>(First 100 free)</div>
+			</section>
+
+			<!-- Testimonials -->
+			<section class="testimonials-section"> 
+				<div class="testimonials-inner">
+					<div class="testimonials-heading">
+						<div>
+							<p id="testimonials" class="section-kicker">03 / Testimonials</p> 
+							<h2 class="section-title">What our clients say about us</h2>
 				</div>
-				<div class='copy'>
-					<p>
-						When a user reaches out via support, our team will do their best to fully handle whatever requests the user has.
-						This can be anything from simple questions like, "I can't find the button" to complex questions that require significant troubleshooting and hand holding.
-						If our representatives are unable to fully assist the user, we will gather as much data about the customers concern/question as possible and escalate the issue to the development team, along with setting appropriate expectations with the user for response time on their issue.
-					</p>
-					<br/>
-					<p>
-						For billing purposes, we count each 'session' as one question, even if the user actually has multiple questions.
-						Inversely, if the user returns the next day with the same question being asked again (perhaps they need clarification, or they forgot the answer) that will be counted as a new session.
-						In our experience, this averages out favorably for the client since it is more frequent to have a user ask multiple questions in a session than to return with the same question across multiple sessions.
-					</p>
 				</div>
-			</div>
-			<div id='addonchat-content' class='closed'>
-				<div class='pricing-specs'>
-					<div class='amount'>$100</div>
-					<div class='per'>Per</div>
-					<div class='unit'>Month</div>
-					<div class='freebie'>(Chat)</div>
+					<div class="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label="Client testimonials" tabindex="0">
+						<button type="button" class="carousel-arrow prev testimonial-prev" aria-label="Previous testimonial"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+						<button type="button" class="carousel-arrow next testimonial-next" aria-label="Next testimonial"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>  
+						<div class="testimonial-viewport">
+							<div class="testimonial-track">
+								<article class="testimonial-card" aria-label="Testimonial 1 of 3">
+									<div class="testimonial-logo-wrap"><img src="img/c_logo-Safe.png" alt="Safe logo" /><span aria-hidden="true">“</span></div>
+									<blockquote>“Safe is extremely grateful for service the serv.eth team provides. They're able to operate autonomously in ambiguity and have been extremely helpful during challenging situations, all while still managing to deliver an exceptional service.”</blockquote>
+									<div class="testimonial-person"><p class="testimonial-author">Rudy Dube</p><p class="testimonial-role">Technical Support Manager</p></div>
+								</article>              
+								<article class="testimonial-card" aria-label="Testimonial 2 of 3">
+									<div class="testimonial-logo-wrap"><img src="img/c_logo-Quicknode.svg" alt="Quicknode logo" /><span aria-hidden="true">“</span></div>
+									<blockquote>“Serv.eth has moderated the Quicknode Discord around the clock for more than four years. They keep the server tidy and the community safe, point builders to the right resources, and help them get the most out of Quicknode. That coverage lets our team focus on bigger operations knowing the community is in good hands.”</blockquote>
+									<div class="testimonial-person"><p class="testimonial-author">Nick Shklovsky</p><p class="testimonial-role">Growth</p></div>
+								</article>
+								<article class="testimonial-card" aria-label="Testimonial 3 of 3">
+									<div class="testimonial-logo-wrap"><img src="img/c_logo-Sablier.svg" alt="Sablier logo" /><span aria-hidden="true">“</span></div>
+									<blockquote>“The Serveth team were a reliable partner to Sablier for over two years, offering great value for money. They handled our customer support so well that we could pretty much forget about it internally and focus on building.”</blockquote>
+									<div class="testimonial-person"><p class="testimonial-author">Paul Berg</p><p class="testimonial-role">Co-founder</p></div>
+								</article>  				
 				</div>
-				<div class='copy'>
-					<p>This is a 100 USD monthly add-on to your bill for every additional chat support platform (e.g Telegram, Intercom).</p>
-					<br/>
-					<p>The added monthly cost still includes 24×7 quality support service (minus 1 hour lunch breaks in certain cases and catastrophic events). Excess questions will still cost an additional $3 per question/case.</p>
 				</div>
-			</div>
-			<div id='addonnonchat-content' class='closed'>
-				<div class='pricing-specs'>
-					<div class='amount'>$200</div>
-					<div class='per'>Per</div>
-					<div class='unit'>Month</div>
-					<div class='freebie'>(Non-chat)</div>
 				</div>
-				<div class='copy'>
-					<p>This is a 200 USD monthly add-on to your bill for each additional non-chat support platform (e.g Email).</p>
-					<br/>
-					<p>The added monthly cost still includes 24×7 quality support service (minus 1 hour lunch breaks in certain cases and catastrophic events). Overage per resolved case will be an additional $5.</p>
 				</div>
-			</div>
-		</div>
-	</modal>
-	<script>
-		const navBar = document.querySelector('#nav-bar')
-		document.querySelector('#nav-bar').addEventListener('click', () => {
-			document.body.style.paddingRight = '0px'
-			document.body.style.overflow = 'visible'
-			navBar.classList.add('closed')
-		})
-		document.querySelector('#menu-button').addEventListener('click', () => {
-			document.body.style.paddingRight = `${(window.innerWidth - document.body.clientWidth).toString(10)}px`
-			document.body.style.overflow = 'hidden'
-			navBar.classList.remove('closed')
-		})
-		
-		const modal = document.querySelector('modal')
-		function closeModal() {
-			document.body.style.paddingRight = '0px'
-			document.body.style.overflow = 'visible'
-			modal.classList.add('closed')
-			document.querySelectorAll('#modal-container > div').forEach(element => element.classList.add('closed'))
-		}
-		function openModal(selector) {
-			document.body.style.paddingRight = `${(window.innerWidth - document.body.clientWidth).toString(10)}px`
-			document.body.style.overflow = 'hidden'
-			modal.classList.remove('closed')
-			document.querySelector(selector).classList.remove('closed')
-		}
-		document.querySelector('modal').addEventListener('click', closeModal)
-		document.querySelector('#month-pricing-button').addEventListener('click', () => openModal('#month-fee-modal-content'))
-		document.querySelector('#message-pricing-button').addEventListener('click', () => openModal('#message-fee-modal-content'))
-		document.querySelector('#question-pricing-button').addEventListener('click', () => openModal('#question-fee-modal-content'))
-		document.querySelector('#addonchat').addEventListener('click', () => openModal('#addonchat-content'))
-		document.querySelector('#addonnonchat').addEventListener('click', () => openModal('#addonnonchat-content'))
-	</script>
-</body>
+			</section>
+
+			<!-- Pricing -->
+			<section class="content-section"> 
+				<div class="pricing-head">
+					<div>
+						<p id="pricing" class="section-kicker">04 / Pricing</p> 
+						<h2 class="section-title">Simple pricing that scales with your community.</h2>
+				</div>
+					<img class="pricing-art" src="img/pricing-img.svg" alt="Cryptocurrency payment illustration" loading="lazy" />
+				</div>
+				<div class="pricing-layout">
+					<article class="pricing-card featured"><p class="price-eyebrow">Core service</p><p class="price-amount">$500</p><p class="price-unit">Per month</p><p class="price-note">Complete support foundation</p><p class="price-summary">Discord onboarding, Ethereum and product support, plus around-the-clock presence.</p><button class="details-button" type="button" data-dialog="monthly-details">Details <span aria-hidden="true">→</span></button></article>
+					<article class="pricing-card"><p class="price-eyebrow">Usage</p><p class="price-amount">$0.04</p><p class="price-unit">Per extra message</p><p class="price-note">First 20,000 Free</p><p class="price-summary">Coverage for higher-volume channels when your community grows.</p><button class="details-button" type="button" data-dialog="message-details">Details <span aria-hidden="true">→</span></button></article>
+					<article class="pricing-card"><p class="price-eyebrow">Usage</p><p class="price-amount">$3</p><p class="price-unit">Per extra question</p><p class="price-note">First 100 Free</p><p class="price-summary">One support session, from troubleshooting through escalation.</p><button class="details-button" type="button" data-dialog="question-details">Details <span aria-hidden="true">→</span></button></article>
+					<article class="pricing-card"><p class="price-eyebrow">Add-on</p><p class="price-amount">$100</p><p class="price-unit">Per month</p><p class="price-note">Additional chat platform</p><p class="price-summary">Extend support to Telegram, Intercom, or another chat platform.</p><button class="details-button" type="button" data-dialog="chat-details">Details <span aria-hidden="true">→</span></button></article>
+					<article class="pricing-card"><p class="price-eyebrow">Add-on</p><p class="price-amount">$200</p><p class="price-unit">Per month</p><p class="price-note">Additional non-chat platform</p><p class="price-summary">Add email or another case-based support platform.</p><button class="details-button" type="button" data-dialog="nonchat-details">Details <span aria-hidden="true">→</span></button></article>
+				</div>
+				<div class="pricing-foot"><p>Pay in ETH, DAI, or USDC as preferred modes of payment, but we are open to accepting payment in other coins/tokens as long as they are liquid enough for us to convert them on receipt.</p></div>
+			</section>
+
+			<dialog id="monthly-details" class="pricing-dialog"><button class="dialog-close" aria-label="Close details">×</button><p class="price-eyebrow">Core service</p><h2>$500 per month</h2><p class="dialog-lead">Complete support foundation</p><div class="dialog-copy"><p>$500 in ETH, DAI, or USDC gets the team started. We learn your product, join your Discord, and begin helping with wallet, gas, pending transaction, and basic product questions.</p><p>The monthly fee covers selected channels generating up to 20,000 messages and up to 100 support questions. Coverage is 24/7, excluding one-hour meal breaks and catastrophic events.</p><p>Optional moderation can also cover spam and scams while the team is present in your channels.</p></div><a href="#contact" class="dialog-contact">Start a conversation →</a></dialog>
+			<dialog id="message-details" class="pricing-dialog"><button class="dialog-close" aria-label="Close details">×</button><p class="price-eyebrow">Usage</p><h2>$0.04 per extra message</h2><p class="dialog-lead">First 20,000 included</p><div class="dialog-copy"><p>High-volume spaces such as trading, speculation, or bot channels can be monitored so support requests are not missed and moderation coverage remains complete.</p><p>The first 20,000 messages read each month are included. Each additional message is $0.04, and selected channels can be muted to keep costs focused on critical support areas.</p></div><a href="#contact" class="dialog-contact">Start a conversation →</a></dialog>
+			<dialog id="question-details" class="pricing-dialog"><button class="dialog-close" aria-label="Close details">×</button><p class="price-eyebrow">Usage</p><h2>$3 per extra question</h2><p class="dialog-lead">First 100 included</p><div class="dialog-copy"><p>A question can range from basic product guidance to involved troubleshooting. If it cannot be resolved, the team gathers context, escalates it, and sets expectations with the user.</p><p>For billing, each support session counts as one question even when several related questions are handled. A return on another day is treated as a new session.</p></div><a href="#contact" class="dialog-contact">Start a conversation →</a></dialog>
+			<dialog id="chat-details" class="pricing-dialog"><button class="dialog-close" aria-label="Close details">×</button><p class="price-eyebrow">Add-on</p><h2>$100 per month</h2><p class="dialog-lead">Additional chat platform</p><div class="dialog-copy"><p>$100 per month is added for each additional chat support platform, such as Telegram or Intercom.</p><p>The add-on includes the same around-the-clock service. Questions above the included allowance remain $3 per question or case.</p></div><a href="#contact" class="dialog-contact">Start a conversation →</a></dialog>
+			<dialog id="nonchat-details" class="pricing-dialog"><button class="dialog-close" aria-label="Close details">×</button><p class="price-eyebrow">Add-on</p><h2>$200 per month</h2><p class="dialog-lead">Additional non-chat platform</p><div class="dialog-copy"><p>$200 per month is added for each non-chat support platform, such as email.</p><p>The add-on includes the same around-the-clock service. Overage is $5 per resolved case.</p></div><a href="#contact" class="dialog-contact">Start a conversation →</a></dialog>
+
+			<!-- Contact -->
+			<section id="contact" class="contact-band">
+				<div class="contact-inner">
+					<p class="eyebrow">Ready when you are</p>
+					<h2 class="contact-title">Give your users the support your product deserves.</h2>
+					<div class="contact-actions">
+						<a href="https://discord.gg/Epk9phBzAG" class="primary-button">
+							<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
+							Join Discord
+						</a>
+						<a href="mailto:micah@serveth.support" class="outline-button">
+							<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 6L2 7" /></svg>
+							Send an email
+						</a>
+				</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<img src="img/logo.svg" alt="Serv.eth" />
+			<p>Ethereum support, around the clock.</p>
+		</footer>
+		<script>
+			(() => {
+				const carousel = document.querySelector('.testimonial-carousel');
+				const viewport = carousel?.querySelector('.testimonial-viewport');
+				const cards = [...(carousel?.querySelectorAll('.testimonial-card') || [])];
+				const prev = carousel?.querySelector('.testimonial-prev');
+				const next = carousel?.querySelector('.testimonial-next');
+
+				const CARD_GAP = 20; 
+				const step = () => {
+					if (!cards.length || !cards[0]) return 0;
+					const delta = cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : 0;
+					if (delta > 10) return delta; 
+					const width = cards[0].offsetWidth || 0;
+					return width ? width + CARD_GAP : 300; 
+				};
+				const maxScroll = () => Math.max(0, (viewport?.scrollWidth || 0) - (viewport?.clientWidth || 0));
+
+				const paint = () => {
+					if (!viewport) return;
+					const current = viewport.scrollLeft;
+					const max = maxScroll();
+					if (prev) prev.disabled = current <= 5;
+					if (next) next.disabled = current >= max - 5;
+				};
+
+				prev?.addEventListener('click', () => {
+					viewport?.scrollBy({ left: -step(), behavior: 'smooth' });
+				});
+				next?.addEventListener('click', () => {
+					viewport?.scrollBy({ left: step(), behavior: 'smooth' });
+				});
+
+				carousel?.addEventListener('keydown', (event) => {
+					if (event.key === 'ArrowLeft') {
+						event.preventDefault();
+						viewport?.scrollBy({ left: -step(), behavior: 'smooth' });
+					}
+					if (event.key === 'ArrowRight') {
+						event.preventDefault();
+						viewport?.scrollBy({ left: step(), behavior: 'smooth' });
+					}
+				});
+
+				let scrollTimer;
+				viewport?.addEventListener('scroll', () => {
+					clearTimeout(scrollTimer);
+					scrollTimer = setTimeout(paint, 50);
+				}, { passive: true });
+
+				window.addEventListener('resize', paint);
+				paint();
+
+				window.addEventListener('load', paint);
+				if (document.fonts && document.fonts.ready) document.fonts.ready.then(paint);
+				setTimeout(paint, 200);
+				if (window.ResizeObserver && viewport) new ResizeObserver(paint).observe(viewport.firstElementChild || viewport);
+
+				document.querySelectorAll('[data-dialog]').forEach((button) => button.addEventListener('click', () => document.getElementById(button.dataset.dialog)?.showModal()));
+				document.querySelectorAll('.pricing-dialog').forEach((dialog) => {
+					dialog.querySelector('.dialog-close')?.addEventListener('click', () => dialog.close());
+					dialog.querySelector('.dialog-contact')?.addEventListener('click', () => dialog.close());
+					dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+				});
+			})();
+		</script>
+	</body>
 </html>
