@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Learn what information to collect before escalating a blockchain issue, from transaction hashes and wallet details to error messages and troubleshooting steps." />
+		<meta name="author" content="Serv.eth" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="What to Collect Before Escalating a Blockchain Issue — Serv.eth Blog" />
+		<meta property="og:description" content="Learn what information to collect before escalating a blockchain issue, from transaction hashes and wallet details to error messages and troubleshooting steps." />
+		<meta name="twitter:card" content="summary" />
+
+		<link rel="icon" href="../img/favicon.png" type="image/png">
+		<link rel="stylesheet" href="../styles.css" />
+		<link rel="stylesheet" href="blog.css" />
+
+		<title>What to Collect Before Escalating a Blockchain Issue | Serv.eth — Serv.eth Blog</title>
+	</head>
+	<body>
+		<header class="blog-hero">
+			<nav class="nav" aria-label="Primary navigation">
+				<a href="../" aria-label="Serv.eth home">
+					<img class="nav-logo" src="../img/logo.svg" alt="Serv.eth" />
+				</a>
+				<div class="nav-links">
+					<a class="nav-link" href="../#service">Our service</a>
+					<a class="nav-link" href="../#about">About us</a>
+					<a class="nav-link" href="../#testimonials">Testimonials</a>
+					<a class="nav-link" href="../#pricing">Pricing</a>
+					<a class="nav-link is-active" href="./" aria-current="page">Blog</a>
+				</div>
+				<a class="outline-button" href="../#contact">
+					Let’s talk
+					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+				</a>
+			</nav>
+			<div class="blog-hero-inner article-header">
+				<a class="back-link" href="./">
+					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+					Back to blog
+				</a>
+				<p class="post-meta"><span class="post-category">Support</span><span>·</span><time datetime="2026-09-07">Sep 07, 2026</time><span>·</span><span>7 min read</span></p>
+				<h1 class="hero-title">What information should you collect <strong>before escalating a blockchain issue?</strong></h1>
+				<p class="hero-sub">The details that save your developers time, and the ones to gather before you pass a case on.</p>
+				<div class="author">
+					<span class="author-avatar" aria-hidden="true">BNG</span>
+					<div>
+						<p>Bing</p>
+						<p class="author-role">Technical Support, Serv.eth Team</p>
+					</div>
+				</div>
+				<figure class="hero-cover">
+					<img class="cover-photo" src="../img/blog/blockchain-support-checklist.jpg" alt="Checklist clipboard with ticked boxes, a magnifying glass over a glowing blockchain cube, an Ethereum logo, and an alert bubble on a blue blockchain background" width="1200" height="630" />
+				</figure>
+			</div>
+		</header>
+
+		<main>
+			<article class="article">
+
+				<p>When a user reports a failed crypto transaction, a wallet connection problem, or an unexpected application error, the first instinct may be to send the issue straight to the development team. But an escalation without enough information often leads to more questions, longer resolution times, and unnecessary back-and-forth between support agents, users, and developers.</p>
+				<p>In Web3, where transactions may be irreversible and issues can involve wallets, smart contracts, and multiple blockchain networks, collecting the right information from the beginning is essential. A structured support process helps teams identify the problem, rule out common causes, and give technical specialists the context they need to investigate.</p>
+				<p>Here’s what your support team should collect before escalating a blockchain issue.</p>
+
+				<h4>1. A Clear Description of the Problem</h4>
+				<p>Start by understanding what the user was trying to do and what happened instead. Ask the user to describe the issue in their own words. Then clarify the expected result and the actual result. For example:</p>
+				<ul>
+					<li><strong>Expected result:</strong> The user wanted to swap ETH for a token.</li>
+					<li><strong>Actual result:</strong> The swap failed, but the wallet still shows a gas fee was charged.</li>
+					<li><strong>When it happened:</strong> The issue occurred after the user confirmed the transaction in their wallet.</li>
+				</ul>
+				<p>Avoid relying on vague descriptions such as “the app is broken” or “my transaction isn’t working.” These statements may describe different underlying problems. Useful questions include:</p>
+				<ul>
+					<li>What action were you trying to complete?</li>
+					<li>What happened after you confirmed it?</li>
+					<li>Did you receive an error message?</li>
+					<li>Has this happened more than once?</li>
+				</ul>
+				<blockquote>The objective is to establish a clear timeline and understand the user’s intended action before investigating further.</blockquote>
+
+				<h4>2. The Blockchain Network</h4>
+				<p>Always establish which blockchain network the user was using. A transaction on Ethereum mainnet is different from one on Arbitrum, Base, Polygon, or another network. Even when applications support multiple networks, their contracts, balances, and transaction histories may differ.</p>
+				<p>Ask the user to confirm the network selected in their wallet or application. Examples include:</p>
+				<ul>
+					<li>Ethereum mainnet</li>
+					<li>Arbitrum One</li>
+					<li>Base</li>
+					<li>Polygon PoS</li>
+				</ul>
+				<p>If the user is unsure, a transaction hash or block explorer link may help identify the network.</p> 
+				<blockquote>This information is especially important when investigating missing tokens, failed transactions, incorrect network selections, and wallet connection issues.</blockquote>
+
+				<h4>3. The Transaction Hash or Relevant Wallet Address</h4>
+				<p>For an on-chain transaction, the transaction hash is one of the most useful pieces of information you can collect. A transaction hash allows a support agent or developer to inspect publicly available blockchain data, including the transaction status, block information, and execution result. Ask the user for:</p>
+				<ul>
+					<li>The transaction hash, if a transaction was submitted.</li>
+					<li>The relevant public wallet address, when needed.</li>
+					<li>A block explorer link, if available.</li>
+				</ul>
+				<p>For example, an Ethereum transaction can be investigated using a suitable explorer such as Etherscan.</p>
+				<p>If no transaction hash exists, don’t assume the transaction failed on-chain. The issue may have occurred before broadcast, during wallet signing, or within the application’s interface.</p>
+				<blockquote><strong>Security reminder:</strong> Never ask users for their seed phrase, private key, wallet password, or secret recovery information. Support staff do not need these credentials to investigate a transaction.</blockquote>
+
+				<h4>4. The Exact Error Message</h4>
+				<p>Ask the user to provide the complete error message rather than a paraphrase.</p>
+				<p>For example, “Transaction failed to sign” and “execution reverted” can indicate problems at different stages of the transaction process. The exact wording can help narrow down whether the issue involves:</p>
+				<ul>
+					<li>Wallet connection or signing</li>
+					<li>Transaction submission</li>
+					<li>Network congestion or fee configuration</li>
+					<li>Smart contract execution</li>
+					<li>Application-side validation</li>
+				</ul>
+				<p>Request a screenshot when it helps show where the error appeared.</p> 
+				<blockquote>Screenshots should be checked for sensitive information before being shared with other teams. If the issue occurs without an error message, record that too.</blockquote>
+
+				<h4>5. The Wallet and Application Details</h4>
+				<p>Record which wallet and application the user was using. Relevant details may include:</p>
+				<ul>
+					<li>Wallet name, such as MetaMask, Trust Wallet, or another supported wallet.</li>
+					<li>Whether the user was using a browser extension or mobile application.</li>
+					<li>The application or website where the issue occurred.</li>
+					<li>Browser and operating system, when relevant.</li>
+					<li>Whether the wallet was connected through a browser, WalletConnect, or another supported method.</li>
+				</ul>				
+					<p>These details help developers determine whether the issue may be specific to a wallet, device, connection method, or application integration.</p>
+					<blockquote>Do not ask for unnecessary personal information. Collect only the technical details needed to investigate the issue.</blockquote>
+
+				<h4>6. The Steps That Reproduced the Issue</h4>
+				<p>A developer needs to understand how the problem occurred, not just the final error. Ask the user to describe the steps leading up to the issue in chronological order. For example:</p>
+				<ol>
+					<li>Opened the decentralized application.</li>
+					<li>Connected a wallet.</li>
+					<li>Selected a token pair.</li>
+					<li>Entered the swap amount.</li>
+					<li>Confirmed the transaction in the wallet.</li>
+					<li>Received an error message after confirmation.</li>
+				</ol>
+				<p>If the problem is reproducible, document the conditions under which it happens. Also record whether the user has already tried troubleshooting steps, such as reconnecting the wallet or refreshing the page.</p> 
+				<blockquote>This prevents support teams from repeatedly suggesting the same actions without new evidence.</blockquote>
+
+				<h4>7. The Approximate Time of the Incident</h4>
+				<p>Record the date and time when the issue occurred, including the time zone if possible. Timestamps help developers correlate a user report with application logs, RPC provider errors, monitoring alerts, and blockchain activity.</p>
+				<p>For recurring problems, record whether the issue happens consistently or only intermittently. If multiple users report the same problem around the same time, the information may help identify a broader service incident rather than an isolated user issue.</p>
+
+				<h4>8. What Has Already Been Checked?</h4>
+				<p>Before escalating, document the checks already completed and their results. Depending on the issue, these may include:</p>
+				<ul class="checklist">
+					<li>Confirming the selected network.</li>
+					<li>Checking the transaction hash in a block explorer.</li>
+					<li>Confirming that the wallet is connected to the intended application.</li>
+					<li>Reviewing the exact error message.</li>
+					<li>Checking whether the application reports a known incident.</li>
+					<li>Reproducing the problem, if safe and appropriate.</li>
+				</ul>
+				<p>Do not ask users to repeat risky transactions or spend additional funds merely to reproduce an error. Any further testing should follow the application’s approved troubleshooting process.</p> 
+				<blockquote>A good escalation includes both what the team found and what remains unknown.</blockquote>
+
+				<h4>9. A Clear Impact and Priority Assessment</h4>
+				<p>Not every blockchain issue requires the same escalation path. Determine whether the problem affects one user or many, whether a core application function is unavailable, and whether there are credible signs of an active security incident. For example:</p>
+				<ul>
+					<li>One user cannot connect a wallet.</li>
+					<li>Several users report that swaps are failing.</li>
+					<li>Users report unexpected transactions or suspected unauthorized access.</li>
+					<li>A critical application function is unavailable across a network.</li>
+				</ul>
+					<ul class="checklist">
+						<li>Suspected exploits, unauthorized transactions, and active security incidents should follow the project’s security escalation procedure immediately.</li>
+						<li>Do not delay urgent reporting while collecting every field on the checklist.</li>
+						<li>Support agents should never promise that funds can be recovered or that a transaction can be reversed.</li>
+						<li>Blockchain outcomes depend on the specific circumstances and protocol.</li>
+					</ul>
+
+				<h4>10. A Concise Escalation Summary</h4>
+				<p>Once the necessary information has been collected, summarize the issue in a format that the technical team can act on. A useful escalation should explain:</p>
+				<ul>
+					<li>What the user was trying to do.</li>
+					<li>What happened instead.</li>
+					<li>Which network and wallet were involved.</li>
+					<li>The transaction hash, if available.</li>
+					<li>The exact error message.</li>
+					<li>The time of the incident.</li>
+					<li>The troubleshooting steps already completed.</li>
+					<li>The number of users affected and the urgency.</li>
+					<li>Any remaining questions or evidence needed.</li>
+				</ul>
+				<blockquote>This summary prevents developers from having to reconstruct the entire support conversation before beginning their investigation.</blockquote>
+
+				<h2>Blockchain Issue Escalation Checklist</h2>
+				<p>Before handing an issue to the technical team, use this checklist to confirm that the essential details have been collected.</p>
+				<ul class="checklist">
+					<li>Clear description of the problem</li>
+					<li>Expected behavior versus actual behavior</li>
+					<li>Blockchain network</li>
+					<li>Transaction hash or relevant public wallet address, if applicable</li>
+					<li>Exact error message and relevant screenshot</li>
+					<li>Wallet, application, device, and connection method</li>
+					<li>Steps to reproduce the issue</li>
+					<li>Approximate incident time and time zone</li>
+					<li>Troubleshooting steps already completed</li>
+					<li>Number of users affected and urgency</li>
+					<li>Security concerns flagged and escalated through the appropriate channel</li>
+				</ul>
+				<p>Not every issue requires every field. For example, a wallet connection error that occurs before a transaction is created may not have a transaction hash. Collect the information relevant to the specific problem rather than delaying escalation to complete an unnecessary checklist.</p>
+
+				<h2>Example: A Well-Prepared Escalation</h2>
+				<p>Imagine a user reports that a token swap failed. Instead of forwarding the message “User can’t swap tokens,” the support agent could provide the following summary:</p>
+				<ul>
+					<li><strong>Issue:</strong> Token swap fails after wallet confirmation.</li>
+					<li><strong>Network:</strong> Base.</li>
+					<li><strong>Wallet:</strong> MetaMask browser extension.</li>
+					<li><strong>Expected behavior:</strong> The swap should complete and the purchased tokens should appear in the wallet.</li>
+					<li><strong>Actual behavior:</strong> The user receives an error after confirming the transaction.</li>
+					<li><strong>Transaction hash:</strong> Provided by the user, if available.</li>
+					<li><strong>Error message:</strong> Exact message copied from the application.</li>
+					<li><strong>Time of incident:</strong> Date and time, including time zone.</li>
+					<li><strong>Troubleshooting completed:</strong> Confirmed the selected network and reviewed the transaction status in the relevant block explorer.</li>
+					<li><strong>Impact:</strong> One user reported the issue; broader impact has not yet been established.</li>
+					<li><strong>Requested investigation:</strong> Determine whether the transaction was broadcast, whether execution failed on-chain, or whether the error occurred before submission.</li>
+				</ul>
+				<p>This gives developers a clear starting point without prematurely assuming the cause of the failure.</p>
+
+				<h2>Build a Better Escalation Process for Your Web3 Support Team</h2>
+				<p>Effective blockchain support isn’t just about answering questions quickly. It’s about gathering accurate information, protecting users, identifying patterns, and ensuring technical teams receive actionable reports.</p>
+				<p>A consistent escalation process can reduce unnecessary back-and-forth, help support agents handle common questions independently, and allow developers to focus on issues that genuinely require their expertise.</p>
+				<p>For Web3 projects, this becomes increasingly important as communities grow and support requests arrive across different wallets, applications, and blockchain networks.</p>				
+			</article>
+
+			<div class="article-footer">
+				<aside class="article-cta">
+					<h2>Need support for your Web3 community?</h2>
+					<p>Serv.eth helps Web3 projects handle community support, troubleshoot common user issues, and route complex problems to the appropriate technical teams. Explore our services to learn how structured support can help your team manage user issues more efficiently.</p>
+					<a class="primary-button" href="../#contact">
+						Let’s talk
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+					</a>
+				</aside>
+			</div>
+
+			<section class="related" aria-labelledby="related-title">
+				<h2 id="related-title" class="section-title">Keep reading</h2>
+				<div class="post-grid">
+					<article class="post-card">
+						<a class="post-cover" href="why-unanswered-discord-questions-cost-you-users.html" tabindex="-1" aria-hidden="true">
+							<img class="cover-photo" src="../img/blog/discord-unanswered-hero.jpg" alt="" loading="lazy" />
+						</a>
+						<div class="post-card-body">
+							<p class="post-meta"><span class="post-category">Support</span><span>·</span><time datetime="2026-08-03">Aug 03, 2026</time></p>
+							<h3 class="post-title"><a href="why-unanswered-discord-questions-cost-you-users.html">Why unanswered Discord questions cost you users</a></h3>
+							<p class="post-excerpt">A user who waits hours for an answer rarely comes back. What we’ve learned about response times, trust, and retention in web3 communities.</p>
+							<a class="read-more" href="why-unanswered-discord-questions-cost-you-users.html">
+								Read article
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+							</a>
+						</div>
+					</article>
+					<article class="post-card">
+						<a class="post-cover" href="stuck-crypto-transactions.html" tabindex="-1" aria-hidden="true">
+							<img class="cover-photo" src="../img/blog/stuck-transactions.jpg" alt="" loading="lazy" />
+						</a>
+						<div class="post-card-body">
+							<p class="post-meta"><span class="post-category">Wallets</span><span>·</span><time datetime="2026-09-25">Sep 25, 2026</time></p>
+							<h3 class="post-title"><a href="stuck-crypto-transactions.html">Stuck transactions: a Support Playbook</a></h3>
+							<p class="post-excerpt">How we walk users through pending transactions, nonce issues and gas selection.</p>
+							<a class="read-more" href="stuck-crypto-transactions.html">
+								Read article
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+							</a>
+						</div>
+					</article>
+					<article class="post-card">
+						<a class="post-cover" href="paying-for-support-in-crypto.html" tabindex="-1" aria-hidden="true">
+							<img class="cover-photo" src="../img/blog/paying-support.jpg" alt="" loading="lazy" />
+						</a>
+						<div class="post-card-body">
+							<p class="post-meta"><span class="post-category">Community</span><span>·</span><time datetime="2026-08-21">Aug 21, 2026</time></p>
+							<h3 class="post-title"><a href="paying-for-support-in-crypto.html">Paying for Support in Crypto: Simple, Flexible, and Crypto-Native</a></h3>
+							<p class="post-excerpt">Why we accept crypto payments and how startup-friendly pricing works for early-stage teams</p>
+							<a class="read-more" href="paying-for-support-in-crypto.html">
+								Read article
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+							</a>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<img src="../img/logo.svg" alt="Serv.eth" />
+			<p>Ethereum support, around the clock.</p>
+		</footer>
+	</body>
+</html>
