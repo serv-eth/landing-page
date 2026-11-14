@@ -1,5 +1,5 @@
 :root {
-  --background: oklch(0.975 0.004 260);
+	--background: oklch(0.975 0.004 260);
 	--foreground: oklch(0.25 0.025 270);
 	--muted-foreground: oklch(0.52 0.025 265);
 	--primary: oklch(0.7 0.14 190);
@@ -51,7 +51,7 @@ ul { padding: 0; list-style: none; }
 	background: linear-gradient(135deg, oklch(0.25 0.09 250), oklch(0.34 0.16 305));
 }
 .hero::after {
-  content: "";
+	content: "";
 	position: absolute;
 	inset: auto 0 0;
 	height: 1px;
@@ -59,7 +59,7 @@ ul { padding: 0; list-style: none; }
 }
 .nav {
 	position: relative;
-	z-index: 10;
+	z-index: 50;
 	margin: 0 auto;
 	max-width: 72rem;
 	display: flex;
@@ -71,6 +71,46 @@ ul { padding: 0; list-style: none; }
 .nav-links { display: none; align-items: center; gap: 2rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
 .nav-link { letter-spacing: 0.16em; color: var(--hero-muted); transition: color 180ms ease; }
 .nav-link:hover { color: var(--hero-foreground); }
+.nav-toggle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.35rem;
+	width: 44px;
+	height: 44px;
+	margin-left: auto;
+	padding: 0 0.6rem;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+.nav-toggle span {
+	display: block;
+	height: 2px;
+	border-radius: 2px;
+	background: var(--hero-foreground);
+	transition: transform 180ms ease, opacity 180ms ease;
+}
+.nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(calc(0.35rem + 2px)) rotate(45deg); }
+.nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(calc(-0.35rem - 2px)) rotate(-45deg); }
+
+.nav-links {
+	position: absolute;
+	top: calc(100% + 0.75rem);
+	left: 0;
+	right: 0;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25rem;
+	padding: 1.5rem 1.25rem;
+	border-radius: 1rem;
+	background: oklch(0.25 0.09 250);
+	box-shadow: 0 16px 40px oklch(0.1 0.03 260 / 0.35);
+}
+.nav.is-open .nav-links { display: flex; }
+
+.nav-link-blog { display: none; }
 
 .hero-grid {
 	position: relative;
@@ -213,6 +253,9 @@ ul { padding: 0; list-style: none; }
 	.hero { padding-left: 2.5rem; padding-right: 2.5rem; }
 	.nav-logo { height: 3.5rem; }
 	.nav-links { display: flex; }
+	.nav-toggle { display: none; }
+	.nav-links { position: static; flex-direction: row; align-items: center; gap: 2rem; padding: 0; border-radius: 0; background: none; box-shadow: none; }
+	.nav-link-blog { display: block; }
 	.hero-grid { grid-template-columns: 1.05fr 0.95fr; padding-top: 2rem; margin-top: 0; }
 	.hero-art { justify-self: end; }
 	.content-section { padding: 9rem 2.5rem; } 
