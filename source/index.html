@@ -32,6 +32,7 @@
 					<a href="#home" aria-label="Serv.eth home">
 						<img class="nav-logo" src="img/logo.svg" alt="Serv.eth" />
 					</a>
+					<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
 					<div class="nav-links">
 						<a class="nav-link" href="#service">Our service</a>
 						<a class="nav-link" href="#about">About us</a>
@@ -318,6 +319,16 @@
 					dialog.querySelector('.dialog-contact')?.addEventListener('click', () => dialog.close());
 					dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
 				});
+
+				const nav = document.querySelector('.nav');
+				const toggle = nav.querySelector('.nav-toggle');
+				const setOpen = (open) => {
+					nav.classList.toggle('is-open', open);
+					toggle.setAttribute('aria-expanded', String(open));
+					toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+				};
+				toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+				nav.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', () => setOpen(false)));
 			})();
 		</script>
 	</body>
