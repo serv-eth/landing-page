@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Why crypto transactions get stuck, how to tell pending from failed, and how support teams can explain it to users calmly without blockchain jargon." />
+		<meta name="author" content="Serv.eth" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Stuck Crypto Transactions: a Support Playbook — Serv.eth Blog" />
+		<meta property="og:description" content="Why crypto transactions get stuck, how to tell pending from failed, and how support teams can explain it to users calmly without blockchain jargon." />
+		<meta name="twitter:card" content="summary" />
+
+		<link rel="icon" href="../img/favicon.png" type="image/png">
+		<link rel="stylesheet" href="../styles.css" />
+		<link rel="stylesheet" href="blog.css" />
+
+		<title>Stuck Crypto Transactions: a Support Playbook | Serv.eth — Serv.eth Blog</title>
+	</head>
+	<body>
+		<header class="blog-hero">
+			<nav class="nav" aria-label="Primary navigation">
+				<a href="../" aria-label="Serv.eth home">
+					<img class="nav-logo" src="../img/logo.svg" alt="Serv.eth" />
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+				<div class="nav-links">
+					<a class="nav-link" href="../#service">Our service</a>
+					<a class="nav-link" href="../#about">About us</a>
+					<a class="nav-link" href="../#testimonials">Testimonials</a>
+					<a class="nav-link" href="../#pricing">Pricing</a>
+					<a class="nav-link is-active" href="./" aria-current="page">Blog</a>
+				</div>
+				<a class="outline-button" href="../#contact">
+					Let’s talk
+					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+				</a>
+			</nav>
+			<div class="blog-hero-inner article-header">
+				<a class="back-link" href="./">
+					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+					Back to blog
+				</a>
+				<p class="post-meta"><span class="post-category">Wallets</span><span>·</span><time datetime="2026-09-25">Sep 25, 2026</time><span>·</span><span>6 min read</span></p>
+				<h1 class="hero-title">Stuck crypto transactions: <strong>a support playbook</strong></h1>
+				<p class="hero-sub">How we walk users through pending transactions, nonce issues and gas selection without jargon.</p>
+				<div class="author">
+					<span class="author-avatar" aria-hidden="true">UD8</span>
+					<div>
+						<p>undoubted08</p>
+						<p class="author-role">Technical Support, Serv.eth Team</p>
+					</div>
+				</div>
+				<figure class="hero-cover">
+					<img class="cover-photo" src="../img/blog/stuck-transactions.jpg" alt="A person in a hoodie stands thinking in front of a glowing wallet panel showing an hourglass, a refresh icon, and a gas gauge, with blockchain cubes on a blue and purple background" width="1200" height="630" />
+				</figure>
+			</div>
+		</header>
+
+		<main>
+			<article class="article">
+
+				<p>There’s no support question that causes more panic than a transaction that won’t confirm. Funds are at stake, the block explorer shows nothing moving, and the user is convinced the money is gone. The first 10 minutes of that conversation are absolutely critical in terms of whether or not they’ll trust your product going forward.</p>
+				<p>For support teams, stuck transactions are one of the most common and sensitive issues they’ll come across. The good news is that most transaction problems are solvable. The challenge is helping users understand what’s happening without overwhelming them in blockchain jargon.</p>
+				<p>That’s why effective transaction support isn’t just about solving the technical issues. It’s about reducing the uncertainty and guiding the user through the situation with clear, calm communication.</p>
+
+				<h2>The first rule: don’t assume the user understands the problem</h2>
+				<p>Many support responses start with explanations that make perfect sense to blockchain experts:</p>
+				<blockquote>"Your transaction is pending because a lower nonce transaction is blocking subsequent transactions and the gas price is currently below network demand."</blockquote>
+				<p>This is technically correct, but it is practically confusing. Most users aren’t interested in learning Ethereum’s transaction queue mechanics. They want answers to three simple questions:</p>
+				<ul>
+					<li>What happened?</li>
+					<li>Is my money safe?</li>
+					<li>What should I do next?</li>
+				</ul>
+				<p>Start there.</p>
+
+				<h2>Why crypto transactions get stuck</h2>
+				<p>A transaction is very rarely going to get stuck because something is actually broken. More often than not, it’s due to network conditions, wallet settings, or transaction sequencing. Understanding the most common causes goes a long way toward helping the support team diagnose the issue more quickly and provide better guidance.</p>
+
+				<h4>1. Network congestion</h4>
+				<p>When there’s a spike in blockchain activity, the network can get very congested. Validators will generally be prioritizing the transactions that are offering the highest fees. During periods of high activity, you can find lower-fee transactions sitting around for a lot longer than you’d normally expect.</p>
+				<p>From the user’s point of view, it’s slow. In reality, the transaction is just queuing up.</p>
+
+				<h4>2. Gas fees set too low</h4>
+				<p>One of the most frequent reasons for a transaction getting stuck is simply not enough gas. A transaction that’s submitted with a fee too low for the current level of network demand will remain pending until network activity subsides. Users often see:</p>
+				<ul>
+					<li>Endless loading states</li>
+					<li>Pending transactions in their wallet</li>
+					<li>No confirmation despite successful submission</li>
+				</ul>
+				<p>Support teams need to remember that the average user doesn’t know much about gas mechanics. Instead of focusing on priority fees and validator rewards, focus on the outcome.</p>
+				<blockquote>"Your transaction is still waiting to be processed because network fees rose after you submitted it."</blockquote>
+				<p>Simple explanations build confidence.</p>
+
+				<h4>3. Nonce conflicts</h4>
+				<p>Nonce issues can seem quite intimidating, but the impact is actually very straightforward. Every transaction from a wallet must be processed in order. If one of the earlier transactions is still pending, then the subsequent transactions can get blocked behind it. They can all get stuck until that first transaction has cleared.</p>
+				<p>Support agents don’t need to turn every interaction into a blockchain lesson. Instead, explain:</p>
+				<blockquote>"An earlier transaction from your wallet is still awaiting confirmation, and this is what is preventing the new transactions from going through."</blockquote>
+				<p>That’s usually all the user needs to know.</p>
+
+				<h4>4. Wallet synchronization issues</h4>
+				<p>At times, the blockchain is working perfectly; the wallet just won’t update in the interface. Users may see:</p>
+				<ul>
+					<li>Missing confirmations</li>
+					<li>Incorrect balances</li>
+					<li>Outdated transaction statuses</li>
+				</ul>
+				<p>A transaction that looks stuck may in fact already be confirmed on-chain. That’s why the support team should always check a blockchain explorer before concluding that a transaction is still pending.</p>
+
+				<h4>5. Smart contract failures</h4>
+				<p>Not every transaction fails due to the network. The transaction may reach the blockchain successfully, only to then hit a problem at the contract level. Common examples include:</p>
+				<ul>
+					<li>Slippage settings that are too strict</li>
+					<li>Insufficient token approvals</li>
+					<li>Contract restrictions</li>
+					<li>Temporary protocol errors</li>
+				</ul>
+				<p>The distinction is important. A pending transaction is not the same as a failed transaction, and that needs to be made clear to avoid people unnecessarily worrying.</p>
+
+				<h2>Walking a user through a pending transaction</h2>
+				<p>The vast majority of “stuck” transactions are simply pending with a gas price that the network no longer accepts. The process is always the same:</p>
+				<ol>
+					<li><strong>Look up the transaction hash.</strong>We check the explorer ourselves first, so the user never has to interpret a block explorer on their own.</li>
+					<li><strong>Classify the state.</strong>Pending, dropped, or replaced. Each has a different fix, and telling the user which one it is removes the guesswork.</li>
+					<li><strong>Speed it up or cancel it.</strong>We walk the user through a same-nonce replacement transaction with higher gas, or a zero-value cancellation, one wallet screen at a time.</li>
+					<li><strong>Confirm the outcome.</strong>We stay with the user until the transaction confirms (or the replacement clears) and they can see it themselves in the explorer.</li>
+				</ol>
+
+				<h2>Nonce issues, in plain language</h2>
+				<p>Nonce problems may sound scary, but the explanation is simple: every transaction that comes out of your wallet has a number, and the network processes those numbers in order. If one number is missing, then everything after it just sits there.</p>
+				<p>Once you get your head around it, the solution makes perfect sense. You either send the missing transaction or you replace the stuck one with the same number. We never ask a user to “clear the nonce” or “reset the wallet” without first explaining what will happen to their pending funds.</p>
+
+				<h2>Gas selection without the jargon</h2>
+				<p>Most stuck transactions start with a gas estimate that was simply too low when the transaction was submitted. Rather than going into a long-winded explanation about gas markets, we give users one working rule: if the transaction is important, use the wallet’s own “high” or “fast” setting and check the current network cost before you submit.</p>
+				<p>If a user is on a wallet whose estimates keep failing, we say so and suggest they switch for that transaction. It’s far better to be honest about the limitations of the tooling and say “this wallet won’t work for this” than to pretend every wallet is the same.</p>
+
+				<h2>When to escalate</h2>
+				<p>A small number of cases are actually broken, such as a bridge that took the funds or a contract that unexpectedly reverted. Those go to support, then to engineering, with the information they need. The user gets a clear expectation of what happens next and when they’ll hear from us.</p>
+				<p>If you handle it that way, a stuck transaction stops being a support emergency. It becomes the moment the user realizes you can be trusted with their money.</p>
+
+				<h2>Why a support playbook matters</h2>
+				<p>Without a consistent process, transaction-related support becomes chaotic. Different agents may provide different explanations. Users receive conflicting advice. Simple situations escalate to engineering unnecessarily.</p>
+				<p>A support playbook creates consistency by defining:</p>
+				<ul class="checklist">
+					<li>Investigation steps</li>
+					<li>Escalation criteria</li>
+					<li>User-facing explanations</li>
+					<li>Recommended troubleshooting paths</li>
+				</ul>
+				<p>It ensures users get accurate guidance while reducing engineers’ workload.</p>
+
+				<h2>The human side of blockchain support</h2>
+				<p>Blockchain transactions can be complicated. Support conversations don’t have to be. Stuck transactions are just part of the crypto experience. Users won’t remember the delay itself; they’ll remember how you explain it and how you handle it.</p>
+				<p>The best support teams won’t just throw around blockchain jargon and complex theory. They’ll give clarity, reassurance, and practical advice so users understand what’s going on and what they need to do.</p>
+				<p>Because when a transaction is stuck, users aren’t looking for a lesson in blockchain mechanics. They want someone who understands the problem and knows how to fix it.</p>
+			</article>
+
+			<div class="article-footer">
+				<aside class="article-cta">
+					<h2>Turn blockchain support from a bottleneck into a competitive advantage</h2>
+					<p>Give your users clear answers, reduce engineering interruptions, and deliver support experiences that build trust.</p>
+					<a class="primary-button" href="../#contact">
+						Let’s talk
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+					</a>
+				</aside>
+			</div>
+
+			<section class="related" aria-labelledby="related-title">
+				<h2 id="related-title" class="section-title">Keep reading</h2>
+				<div class="post-grid">
+					<article class="post-card">
+						<a class="post-cover" href="blockchain-issue-escalation-checklist.html" tabindex="-1" aria-hidden="true">
+							<img class="cover-photo" src="../img/blog/blockchain-support-checklist.jpg" alt="" loading="lazy" />
+						</a>
+						<div class="post-card-body">
+							<p class="post-meta"><span class="post-category">Support</span><span>·</span><time datetime="2026-90-07">Sep 07, 2026</time></p>
+							<h3 class="post-title"><a href="blockchain-issue-escalation-checklist.html">What information should you collect before escalating a blockchain issue?</a></h3>
+							<p class="post-excerpt">The context we collect before handing an issue to your engineering team, and why it saves hours.</p>
+							<a class="read-more" href="blockchain-issue-escalation-checklist.html">
+								Read article
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+							</a>
+						</div>
+					</article>
+					<article class="post-card">
+						<a class="post-cover" href="why-unanswered-discord-questions-cost-you-users.html" tabindex="-1" aria-hidden="true">
+							<img class="cover-photo" src="../img/blog/discord-unanswered-hero.jpg" alt="" loading="lazy" />
+						</a>
+						<div class="post-card-body">
+							<p class="post-meta"><span class="post-category">Support</span><span>·</span><time datetime="2026-08-03">Aug 03, 2026</time></p>
+							<h3 class="post-title"><a href="why-unanswered-discord-questions-cost-you-users.html">Why unanswered Discord questions cost you users</a></h3>
+							<p class="post-excerpt">A user who waits hours for an answer rarely comes back. What we’ve learned about response times, trust, and retention in web3 communities.</p>
+							<a class="read-more" href="why-unanswered-discord-questions-cost-you-users.html">
+								Read article
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+							</a>
+						</div>
+					</article>
+					<article class="post-card">
+						<a class="post-cover" href="paying-for-support-in-crypto.html" tabindex="-1" aria-hidden="true">
+							<img class="cover-photo" src="../img/blog/paying-support.jpg" alt="" loading="lazy" />
+						</a>
+						<div class="post-card-body">
+							<p class="post-meta"><span class="post-category">Community</span><span>·</span><time datetime="2026-08-21">Aug 21, 2026</time></p>
+							<h3 class="post-title"><a href="paying-for-support-in-crypto.html">Paying for Support in Crypto: Simple, Flexible, and Crypto-Native</a></h3>
+							<p class="post-excerpt">Why we accept crypto payments and how startup-friendly pricing works for early-stage teams</p>
+							<a class="read-more" href="paying-for-support-in-crypto.html">
+								Read article
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+							</a>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<img src="../img/logo.svg" alt="Serv.eth" />
+			<p>Ethereum support, around the clock.</p>
+		</footer>
+
+		<script>
+			(() => {
+				const nav = document.querySelector('.nav');
+				const toggle = nav.querySelector('.nav-toggle');
+				const setOpen = (open) => {
+					nav.classList.toggle('is-open', open);
+					toggle.setAttribute('aria-expanded', String(open));
+					toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+				};
+				toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+				nav.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+			})();
+		</script>
+	</body>
+</html>
